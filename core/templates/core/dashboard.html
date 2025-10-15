@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-4 text-center">Dashboard</h2>
+
+  <!-- === First Row: Total Clients === -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-10">
+      <div class="card shadow-sm p-4 text-center">
+        <h4>Total Clients</h4>
+        <p class="display-6">{{ total_clients|default:"0" }}</p>
+        <a href="{% url 'client-list' %}" class="btn btn-outline-primary btn-sm">View Clients</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- === Second Section: Orders Summary === -->
+  <div class="card shadow-sm p-8">
+    <h4 class="text-center mb-4">Orders Summary</h4>
+
+    <!-- Inner first row: Total Orders -->
+    <div class="row text-center mb-4">
+      <div class="col-md-12">
+        <div class="card bg-light p-3">
+          <h5>Total Orders</h5>
+          <p class="display-6 mb-0">{{ total_orders|default:"0" }}</p>
+          <a href="{% url 'order-list' %}" class="btn btn-outline-primary btn-sm mt-2">View Orders</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inner second row: Orders by status -->
+    <div class="row text-center g-3 align-items-stretch">
+      <div class="col-md-4 d-flex">
+        <div class="card shadow-sm p-3 flex-fill">
+          <h5>Pending Orders</h5>
+          <p class="fs-3 text-warning fw-bold mb-0">{{ pending_orders|default:"0" }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card shadow-sm p-3 flex-fill">
+          <h5>In Progress</h5>
+          <p class="fs-3 text-info fw-bold mb-0">{{ in_progress_orders|default:"0" }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card shadow-sm p-3 flex-fill">
+          <h5>Completed</h5>
+          <p class="fs-3 text-success fw-bold mb-0">{{ completed_orders|default:"0" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Ensure equal card heights */
+  .card {
+    min-height: 150px;
+  }
+
+  /* Adjust inner text alignment vertically if needed */
+  .card h5 {
+    margin-bottom: 0.5rem;
+  }
+</style>
+{% endblock %}
