@@ -1,11 +1,13 @@
 Client Order Management System (Django Case Study)
 
 1. Description
-    The Client Order Management System is a web-based platform developed using Django to help consulting firms efficiently manage clients and their orders.
+
+   The Client Order Management System is a web-based platform developed using Django to help consulting firms efficiently manage clients and their orders.
     It provides CRUD operations for both Clients and Orders, an total view Dashboard, and supports client and order search, filtering, CSV export, and pagination.
 
-2. Features
-    a. User Authentication
+3. Features
+
+   a. User Authentication
         -   Built-in Django authentication system.
         -   Only logged-in users can access the system.
         -   Admin users can manage all data.
@@ -32,7 +34,8 @@ Client Order Management System (Django Case Study)
         -   Clean, modular Django MVC structure.
 
 
-3. Installation & Setup
+4. Installation & Setup
+
    a. Clone the Repository
         git clone https://github.com/yourusername/CLIENTORDERPROJECT_KPMG.git
         cd CLIENTORDERPROJECT_KPMG
@@ -55,13 +58,17 @@ Client Order Management System (Django Case Study)
 
     g. open your browser and visit: http://127.0.0.1:8000/
 
-4. Sample Data
-    You can add more data through the Django admin panel at: http://127.0.0.1:8000/admin/
+5. Sample Data
+
+   You can add more data through the Django admin panel at: http://127.0.0.1:8000/admin/
     Or manually add records via the interface.
 
-5. Requirements
-    Please refer to the requirement.txt file
+7. Requirements
 
-6. Author
-    Ho Khai Liang
-    hokhailiang1215@gmail.com# ClientOrderManagementSystem
+   Please refer to the requirement.txt file
+
+9. Author
+
+   Ho Khai Liang
+
+   hokhailiang1215@gmail.com# ClientOrderManagementSystem
